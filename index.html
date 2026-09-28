@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratik Kedarnath Kshirsagar - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Pratik Kedarnath Kshirsagar</h1>
+        <nav>
+            <a href="index.html">home</a> / 
+            <a href="projects.html">projects</a> / 
+            <a href="about.html">about</a> / 
+            <a href="contact.html">contact</a> / 
+            <a href="#" id="open-resume" onclick="document.getElementById('resumeModal').classList.add('active'); return false;">resume</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home / Intro Section -->
+        <section>
+            <h2>Hey There!</h2>
+            <p>
+                I am a Computer Engineering student at Pune Institute of Computer Technology (PICT), Pune, interested in backend development,
+                network automation, systems programming, databases, and problem solving.
+            </p>
+            <p class="links">
+                <a href="https://www.linkedin.com/in/pratik-kshirsagar-mk/" target="_blank" rel="noopener">LinkedIn</a> | 
+                <a href="https://github.com/Pratik-pk264" target="_blank" rel="noopener">GitHub</a> | 
+                <a href="https://codeforces.com/profile/Pratikmk2645" target="_blank" rel="noopener">Codeforces</a> | 
+                <a href="https://leetcode.com/u/pratikmk264/" target="_blank" rel="noopener">LeetCode</a> | 
+                <a href="https://www.codechef.com/users/pratikmk264" target="_blank" rel="noopener">CodeChef</a>
+            </p>
+        </section>
+
+        <!-- About Section -->
+        <section>
+            <h2>About</h2>
+            <p>
+                I love problem solving and competitive programming. I'm also deeply interested in backend systems, network automation, and building scalable applications.
+            </p>
+            <p>
+                I enjoy building high-performance architectures and working on challenging engineering problems that push me to learn and grow. 
+                My focus is on writing clean, efficient code and continuously improving my technical skills.
+            </p>
+        </section>
+
+        <!-- Experience Section -->
+        <section>
+            <h2>Experience</h2>
+            <div class="project-list">
+                <div class="project-item">
+                    <div class="project-date">2026</div>
+                    <div class="project-content">
+                        <span class="project-name"><strong>Barclays</strong> — Software Engineering Intern (GTIS, Network Automation)</span>
+                        <p class="project-description">Pune, India (June 2026 – Aug 2026)</p>
+                        <p class="project-description">Worked on a production-grade GTM Automation platform built using FastAPI for automated provisioning and management of F5 GTM resources. Contributed to event-driven processing, async database sessions, Celery optimization, caching, and OpenTelemetry tracing, improving request completion time from 12–15 min to 4–5 min.</p>
+                        <p class="project-description">Designed and developed a production GTM Observability Dashboard using Django with FastAPI backend APIs, implementing request lifecycle tracking, advanced filtering, and failure analytics.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section>
+            <h2>Projects</h2>
+            <div class="project-list">
+                <div class="project-item">
+                    <div class="project-date">2026</div>
+                    <div class="project-content">
+                        <span class="project-name"><strong>TraceHost</strong>: Suspicious Website Hosting Detection System | Network Security</span>
+                        <p class="project-description">Developed a solution for Madhya Pradesh Police to detect hosting providers masked by Cloudflare.</p>
+                        <p class="project-description">Implemented mechanisms to analyze SSL certificates and retrieve hosting details (DNS Lookups, WHOIS analysis).</p>
+                        <p class="project-description">Enabled accurate threat intelligence through real-time data analysis and network probing.</p>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="project-date">2025</div>
+                    <div class="project-content">
+                        <span class="project-name"><strong>RentEasy</strong>: Rental Marketplace Platform | MERN Stack</span>
+                        <p class="project-description">Developed a rental marketplace for listing and renting tools, gadgets, and furniture with complete rental workflows.</p>
+                        <p class="project-description">Implemented JWT and Google OAuth authentication, product reviews, notifications, cart management, and availability tracking.</p>
+                        <p class="project-description">Built a product recommendation system using Content-Based Filtering and Popularity-Based algorithms.</p>
+                        <p class="project-description">Integrated Cloudinary for image storage, developed REST APIs for management, and implemented real-time renter–owner chat using Socket.IO.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Honors & Awards Section -->
+        <section>
+            <h2>Honors & Awards</h2>
+            <ul class="achievement-list">
+                <li>
+                    <strong>ICPC (International Collegiate Programming Contest)</strong> Amritapuri Regionalist 2026 – AIR 99.
+                </li>
+                <li>
+                    <strong>Competitive Programming</strong>: Codeforces Specialist (Max rating 1527) | LeetCode Guardian (Max rating 2148) | CodeChef 4-star (Max rating 1804).
+                </li>
+                <li>
+                    <strong>Hackathons & Contests</strong>: Runner-up, NCC 2024 | Runner-up, Reverse Coding (Credenz 2025) | 5th Place, Reverse Coding (PICT IEEE 2024).
+                </li>
+            </ul>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section>
+            <h2>Technical Skills</h2>
+            <ul class="achievement-list">
+                <li>
+                    <strong>Languages</strong>: C++, Python
+                </li>
+                <li>
+                    <strong>Backend</strong>: FastAPI, Django, Node.js, REST APIs, Celery
+                </li>
+                <li>
+                    <strong>Frontend</strong>: React.js, HTML, CSS
+                </li>
+                <li>
+                    <strong>Databases</strong>: MySQL, MongoDB, MSSQL, PostgreSQL
+                </li>
+                <li>
+                    <strong>Tools & Platforms</strong>: Git, GitHub, Visual Studio Code
+                </li>
+                <li>
+                    <strong>Coursework</strong>: Data Structures and Algorithms, Object Oriented Programming
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Resume Modal -->
+    <div class="resume-modal-overlay" id="resumeModal">
+        <div class="resume-modal">
+            <div class="resume-modal-toolbar">
+                <span>Pratik Kedarnath Kshirsagar — Resume</span>
+                <div class="resume-modal-actions">
+                    <a href="resume.pdf" download="Pratik_Kshirsagar_Resume.pdf" class="resume-download-btn">⬇ Download</a>
+                    <button class="resume-modal-close" onclick="document.getElementById('resumeModal').classList.remove('active')" aria-label="Close">✕</button>
+                </div>
+            </div>
+            <iframe src="resume.pdf" title="Pratik Kshirsagar Resume"></iframe>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('resumeModal').addEventListener('click', function(e) {
+            if (e.target === this) this.classList.remove('active');
+        });
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') document.getElementById('resumeModal').classList.remove('active');
+        });
+    </script>
+</body>
+</html>

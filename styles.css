@@ -1,0 +1,330 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', serif, system-ui;
+    background-color: #0a0a0a;
+    color: #e8e8e8;
+    line-height: 1.7;
+    padding: 2rem 1rem;
+}
+
+/* Container */
+main {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    max-width: 750px;
+    margin: 0 auto 4rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+header nav {
+    font-size: 1rem;
+}
+
+header nav a {
+    text-decoration: underline;
+    color: #e8e8e8;
+    margin: 0 0.25rem;
+}
+
+header nav a:hover {
+    opacity: 0.7;
+}
+
+/* Sections */
+section {
+    margin-bottom: 4rem;
+}
+
+section h2 {
+    font-size: 1.8rem;
+    font-weight: normal;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.01em;
+}
+
+section p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    max-width: 65ch;
+}
+
+/* Links */
+a {
+    color: #e8e8e8;
+    text-decoration: underline;
+    transition: opacity 0.2s ease;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+/* Social Links */
+.links {
+    margin-top: 2rem;
+    font-size: 1rem;
+}
+
+/* Projects */
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.project-item {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.project-date {
+    font-size: 0.95rem;
+    color: #a0a0a0;
+    min-width: 60px;
+    flex-shrink: 0;
+}
+
+.project-content {
+    flex: 1;
+}
+
+.project-name {
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+span.project-name {
+    text-decoration: none;
+    color: #e8e8e8;
+}
+
+.project-description {
+    font-size: 1rem;
+    color: #c0c0c0;
+    margin: 0;
+}
+
+/* Contact */
+#contact p {
+    margin: 0;
+}
+
+/* Achievement List */
+.achievement-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.achievement-list li {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+    max-width: 65ch;
+}
+
+.achievement-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #a0a0a0;
+}
+
+.achievement-list li strong {
+    font-weight: normal;
+    color: #e8e8e8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 1.5rem 1rem;
+    }
+
+    header {
+        margin-bottom: 3rem;
+        padding-bottom: 1.5rem;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header nav {
+        font-size: 0.95rem;
+    }
+
+    section {
+        margin-bottom: 3rem;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    section p {
+        font-size: 1rem;
+    }
+
+    .project-item {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .project-date {
+        min-width: auto;
+    }
+
+    .links {
+        font-size: 0.95rem;
+    }
+
+    .achievement-list li {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.75rem;
+    }
+
+    header nav {
+        font-size: 0.9rem;
+        line-height: 1.8;
+    }
+
+    section h2 {
+        font-size: 1.3rem;
+    }
+
+    .links {
+        font-size: 0.9rem;
+        line-height: 1.8;
+    }
+
+    .achievement-list li {
+        font-size: 0.95rem;
+    }
+}
+
+/* ── Resume Modal ─────────────────────────────────── */
+.resume-modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.resume-modal-overlay.active {
+    display: flex;
+}
+
+.resume-modal {
+    position: relative;
+    width: 90vw;
+    max-width: 860px;
+    height: 90vh;
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.resume-modal-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.65rem 1rem;
+    background: #111;
+    border-bottom: 1px solid #2a2a2a;
+    flex-shrink: 0;
+}
+
+.resume-modal-toolbar span {
+    font-size: 0.95rem;
+    color: #a0a0a0;
+    letter-spacing: 0.02em;
+}
+
+.resume-modal-actions {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.resume-download-btn {
+    font-family: inherit;
+    font-size: 0.9rem;
+    color: #e8e8e8;
+    background: #2a2a2a;
+    border: 1px solid #3a3a3a;
+    padding: 0.35rem 0.85rem;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s ease, opacity 0.2s ease;
+}
+
+.resume-download-btn:hover {
+    background: #3a3a3a;
+    opacity: 1;
+}
+
+.resume-modal-close {
+    font-family: inherit;
+    font-size: 1.1rem;
+    color: #a0a0a0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    transition: color 0.2s ease, background 0.2s ease;
+}
+
+.resume-modal-close:hover {
+    color: #e8e8e8;
+    background: #2a2a2a;
+}
+
+.resume-modal iframe {
+    flex: 1;
+    width: 100%;
+    border: none;
+    background: #fff;
+}
+
+@media (max-width: 600px) {
+    .resume-modal {
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+    }
+}

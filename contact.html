@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Pratik Kedarnath Kshirsagar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Pratik Kedarnath Kshirsagar</h1>
+        <nav>
+            <a href="index.html">home</a> / 
+            <a href="projects.html">projects</a> / 
+            <a href="about.html">about</a> / 
+            <a href="contact.html">contact</a> / 
+            <a href="#" id="open-resume" onclick="document.getElementById('resumeModal').classList.add('active'); return false;">resume</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>
+                <a href="https://www.linkedin.com/in/pratik-kshirsagar-mk/" target="_blank" rel="noopener">LinkedIn</a>
+            </p>
+            <p>
+                <a href="https://github.com/Pratik-pk264" target="_blank" rel="noopener">GitHub</a>
+            </p>
+            <p>
+                <a href="mailto:pratikmk264@gmail.com">pratikmk264@gmail.com</a>
+            </p>
+            <p>
+                <a href="tel:+918888928533">+91-8888928533</a>
+            </p>
+        </section>
+    </main>
+
+    <!-- Resume Modal -->
+    <div class="resume-modal-overlay" id="resumeModal">
+        <div class="resume-modal">
+            <div class="resume-modal-toolbar">
+                <span>Pratik Kedarnath Kshirsagar — Resume</span>
+                <div class="resume-modal-actions">
+                    <a href="resume.pdf" download="Pratik_Kshirsagar_Resume.pdf" class="resume-download-btn">⬇ Download</a>
+                    <button class="resume-modal-close" onclick="document.getElementById('resumeModal').classList.remove('active')" aria-label="Close">✕</button>
+                </div>
+            </div>
+            <iframe src="resume.pdf" title="Pratik Kshirsagar Resume"></iframe>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('resumeModal').addEventListener('click', function(e) {
+            if (e.target === this) this.classList.remove('active');
+        });
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') document.getElementById('resumeModal').classList.remove('active');
+        });
+    </script>
+</body>
+</html>

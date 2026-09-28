@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Pratik Kedarnath Kshirsagar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Pratik Kedarnath Kshirsagar</h1>
+        <nav>
+            <a href="index.html">home</a> / 
+            <a href="projects.html">projects</a> / 
+            <a href="about.html">about</a> / 
+            <a href="contact.html">contact</a> / 
+            <a href="#" id="open-resume" onclick="document.getElementById('resumeModal').classList.add('active'); return false;">resume</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- About Section -->
+        <section>
+            <h2>About</h2>
+            <p>
+                I am a Computer Engineering student at Pune Institute of Computer Technology (PICT), Pune, currently maintaining a CGPA of 9.795. 
+                I have a strong foundation in data structures, algorithms, and competitive programming, with a passion for building scalable backend architectures and solving complex engineering problems.
+            </p>
+            <p>
+                My technical expertise spans Python, C++, FastAPI, Django, Node.js, and modern relational and NoSQL databases. 
+                I focus on writing clean, maintainable code, designing robust REST APIs, and implementing high-throughput automated workflows.
+            </p>
+        </section>
+
+        <!-- Experience Section -->
+        <section>
+            <h2>Experience</h2>
+            <div class="project-list">
+                <div class="project-item">
+                    <div class="project-date">2026</div>
+                    <div class="project-content">
+                        <span class="project-name"><strong>Barclays</strong> — Software Engineering Intern (GTIS, Network Automation)</span>
+                        <p class="project-description">Pune, India (June 2026 – Aug 2026)</p>
+                        <p class="project-description">Contributed to a production-grade GTM Automation platform built with FastAPI for automated provisioning and management of F5 GTM resources (WideIPs, Pools, and Pool Members). Identified 15+ workflow and reliability issues and engineered optimizations with event-driven processing, async sessions, Celery, and OpenTelemetry tracing, reducing request completion times from 12–15 min down to 4–5 min.</p>
+                        <p class="project-description">Designed and developed a production GTM Observability Dashboard using Django and FastAPI backend APIs, featuring request lifecycle tracking, advanced filtering, pagination, and failure analytics integrated with ServiceNow and Ansible metadata.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section>
+            <h2>Technical Skills</h2>
+            <ul class="achievement-list">
+                <li>
+                    <strong>Languages</strong>: C++, Python
+                </li>
+                <li>
+                    <strong>Backend</strong>: FastAPI, Django, Node.js, REST APIs, Celery
+                </li>
+                <li>
+                    <strong>Frontend</strong>: React.js, HTML, CSS
+                </li>
+                <li>
+                    <strong>Databases</strong>: MySQL, MongoDB, MSSQL, PostgreSQL
+                </li>
+                <li>
+                    <strong>Tools & Platforms</strong>: Git, GitHub, Visual Studio Code
+                </li>
+                <li>
+                    <strong>Coursework</strong>: Data Structures and Algorithms, Object Oriented Programming
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Resume Modal -->
+    <div class="resume-modal-overlay" id="resumeModal">
+        <div class="resume-modal">
+            <div class="resume-modal-toolbar">
+                <span>Pratik Kedarnath Kshirsagar — Resume</span>
+                <div class="resume-modal-actions">
+                    <a href="resume.pdf" download="Pratik_Kshirsagar_Resume.pdf" class="resume-download-btn">⬇ Download</a>
+                    <button class="resume-modal-close" onclick="document.getElementById('resumeModal').classList.remove('active')" aria-label="Close">✕</button>
+                </div>
+            </div>
+            <iframe src="resume.pdf" title="Pratik Kshirsagar Resume"></iframe>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('resumeModal').addEventListener('click', function(e) {
+            if (e.target === this) this.classList.remove('active');
+        });
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') document.getElementById('resumeModal').classList.remove('active');
+        });
+    </script>
+</body>
+</html>
